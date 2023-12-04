@@ -5,7 +5,7 @@ const app = express();
 // Routes
 app.get("/send/:message", (req, res, next) => {
   const message = req.params.message;
-  if (message.length < 3) return next("An error occurred: Your message is too short!");
+  if (message.length !== 2) return next("An error occurred: Your message is too short!");
   res.send(`Your message: ${message}`);
 });
 
