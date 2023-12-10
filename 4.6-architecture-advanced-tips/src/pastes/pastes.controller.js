@@ -108,7 +108,6 @@ function update(req, res) {
   paste.text = text;
 
   res.json({ data: paste });
-
 }
 
 function read(req, res, next) {

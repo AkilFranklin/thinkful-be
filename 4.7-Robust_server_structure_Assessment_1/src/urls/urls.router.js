@@ -4,9 +4,6 @@ const usesController = require("../uses/uses.controller")
 const usesRouter = require("../uses/uses.router");
 const methodNotAllowed = require("../errors/methodNotAllowed")
 
-// router.use("/:urlId/uses/:useId", usesRouter).all(methodNotAllowed);
-// router.use("/:urlId/uses/:useId", controller.urlExists, usesController.useExists, usesRouter).all(methodNotAllowed);
-// router.use("/:urlId/uses", controller.urlExists, usesRouter).all(methodNotAllowed);
 router.use("/:urlId/uses", usesRouter).all(methodNotAllowed);
 
 router
